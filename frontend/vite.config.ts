@@ -3,14 +3,11 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
+  plugins: [react(), tailwindcss()],
   server: {
     proxy: {
-      '/api': 'http://localhost:8000',
-      '/auth': 'http://localhost:8000',
-    }
-  }
-})
+      "/api": "https://flowx-jlry.onrender.com",
+      "/auth": "https://flowx-jlry.onrender.com",
+    },
+  },
+});
